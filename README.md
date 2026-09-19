@@ -1,35 +1,27 @@
-# E-Governance Data Collection and Cleaning Pipeline
+# E-Governance Data Ingestion, Hygiene & Exploratory Analytics Pipeline
 
-**Internship:** Yuva Intern / NSDC Data Analytics  
-**Task:** Week 2 — Data Collection and Cleaning for Digital Public Services  
+**Internship:** Yuva Intern / NSDC Data Analytics Track  
+**Domain:** Digital Public Services & E-Governance Analytics  
+**Repository:** End-to-End Data Ingestion, Automated Quality Hygiene & Exploratory Analysis Engine  
 
-## Overview
-This repository implements an automated, reproducible data ingestion and hygiene pipeline for open-source e-governance transactional records. It processes a benchmark of 125,480 transactional entries across five major citizen services (Sarathi, Vahan, MeeSeva, DigiLocker, and PDS e-Challan) alongside infrastructure benchmarks from TRAI.
+---
 
-## Key Pipeline Features
-- **Schema Normalization:** Converts non-standard, mixed-case headers to clean snake_case.
-- **Entity Resolution:** Standardizes historical/archaic state names using official Local Government Directory (LGD) coding.
-- **Deduplication:** Removes multi-source batch duplicates using composite primary keys.
-- **Outlier Quarantine:** Isolates extreme clerical errors using IQR 3.0× boundary fencing.
-- **Stratified Median Imputation:** Imputes missing turnaround latencies by department category.
+## Repository Structure
 
-## Cleaning Audit Summary
-| Metric | Count / Percentage |
-| :--- | :--- |
-| **Raw Records Ingested** | 125,480 |
-| **Duplicates Removed** | 4,112 (3.28%) |
-| **Negative Sentinel Records Purged** | 418 |
-| **Missing Primary Keys Dropped** | 842 |
-| **Extreme Outliers Quarantined** | 185 |
-| **Final Validated Output** | **119,923** |
-| **Net Analytical Retention Rate** | **95.57%** |
-
-## How to Run
-
-1. Clone the repository and install dependencies:
-```bash
-git clone [https://github.com/](https://github.com/)<your-username>/egov-data-cleaning.git
-cd egov-data-cleaning
-python3 -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-pip install -r requirements.txt
+```text
+├── scripts/
+│   ├── clean_data.py          # Week 2: Automated data ingestion & hygiene engine
+│   └── eda_analysis.py        # Week 3: Visual EDA & inferential hypothesis engine
+├── data/
+│   ├── raw/                   # Raw transactional logs (raw_egov_transactions.csv)
+│   └── processed/             # Audited output data, quality summaries & plots
+│       ├── cleaned_egov_services.csv
+│       ├── cleaning_audit_summary.txt
+│       ├── eda_summary_statistics.csv
+│       └── visualizations/    # Generated high-resolution PNG charts
+│           ├── viz1_state_volume.png
+│           ├── viz2_department_latency_boxplot.png
+│           ├── viz3_timeseries_surge.png
+│           └── viz4_correlation_heatmap.png
+├── requirements.txt           # Environment dependencies
+└── README.md                  # Unified technical documentation
