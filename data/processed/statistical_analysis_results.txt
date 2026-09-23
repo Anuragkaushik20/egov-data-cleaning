@@ -8,7 +8,7 @@ Dep. Variable:           latency_days   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.000
 Method:                 Least Squares   F-statistic:                    0.2753
 Date:                Wed, 23 Sep 2026   Prob (F-statistic):              0.759
-Time:                        11:32:50   Log-Likelihood:            -3.8626e+05
+Time:                        11:34:11   Log-Likelihood:            -3.8626e+05
 No. Observations:              120425   AIC:                         7.725e+05
 Df Residuals:                  120422   BIC:                         7.726e+05
 Df Model:                           2                                         
