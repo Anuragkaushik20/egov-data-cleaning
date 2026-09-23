@@ -1,0 +1,49 @@
+=========================================================
+1. ORDINARY LEAST SQUARES (OLS) MULTIPLE LINEAR REGRESSION
+=========================================================
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           latency_days   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.000
+Method:                 Least Squares   F-statistic:                    0.2753
+Date:                Wed, 23 Sep 2026   Prob (F-statistic):              0.759
+Time:                        11:32:50   Log-Likelihood:            -3.8626e+05
+No. Observations:              120425   AIC:                         7.725e+05
+Df Residuals:                  120422   BIC:                         7.726e+05
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+teledensity_pct     -0.0002      0.001     -0.307      0.759      -0.002       0.001
+surge_factor         0.0355      0.052      0.676      0.499      -0.067       0.138
+automation_index    19.8890      0.285     69.761      0.000      19.330      20.448
+==============================================================================
+Omnibus:                    50064.221   Durbin-Watson:                   2.006
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           250178.814
+Skew:                           1.989   Prob(JB):                         0.00
+Kurtosis:                       8.833   Cond. No.                     1.47e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.47e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+VARIANCE INFLATION FACTOR (VIF):
+            Feature  VIF
+0   teledensity_pct  1.0
+1      surge_factor  1.0
+2  automation_index  1.0
+
+=========================================================
+2. INFERENTIAL HYPOTHESIS TESTING (t-Test & ANOVA)
+=========================================================
+
+Welch's Two-Sample t-Test (Manual Revenue vs Automated Identity):
+t-Statistic = nan, p-value = nan
+
+One-Way ANOVA (Processing Latency Across 5 Departments):
+F-Statistic = 7.6503, p-value = 3.6984e-06
+
